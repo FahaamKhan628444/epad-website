@@ -10,7 +10,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="mt-6 text-gray-600">
-            Professional signage and branding solutions.
+            Professional signage and branding solutions, serving since 2002.
           </p>
         </div>
 
