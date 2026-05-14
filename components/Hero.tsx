@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="container-custom text-center">
 
         <h1 className="text-4xl md:text-6xl font-bold leading-tight text-gray-900">
-          Since 2022<br />
+          Since 2002<br />
           Premium Signage & Branding Solutions
         </h1>
 
