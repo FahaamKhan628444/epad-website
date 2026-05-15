@@ -21,9 +21,15 @@ export default function Navbar() {
     className="object-contain"
   />
 
-  <span className="text-2xl font-bold text-blue-900">
+  <div className="flex flex-col">
+  <span className="text-2xl font-bold tracking-wide text-blue-900">
     Eastpoint Advertising
   </span>
+
+  <span className="mt-1 text-sm font-medium tracking-[0.2em] text-gray-500 uppercase">
+    One Small Destination for Complete Advertising
+  </span>
+</div>
 </Link>
 
         {/* DESKTOP MENU */}
