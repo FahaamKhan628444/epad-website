@@ -3,8 +3,12 @@ export default function Hero() {
     <section className="bg-gray-100 section-padding">
       <div className="container-custom text-center">
 
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-gray-900">
-          Since 2002<br />
+         <h1 className="text-3xl md:text-xl font-bold leading-tight text-red-500">
+          Eastpoint Advertising<br /> Since 2002
+        </h1>
+
+        <h1 className="text-xl md:text-xl font-bold leading-tight text-gray-900">
+          {/* Since 2002<br /> */}
           Premium Signage & Branding Solutions
         </h1>
 

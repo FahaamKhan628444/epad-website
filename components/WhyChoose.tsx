@@ -28,7 +28,7 @@ export default function WhyChoose() {
           </h2>
 
           <p className="mt-4 text-gray-600">
-            Trusted signage solutions for businesses and brands.
+            Trusted, premium quality, and honest service with experience.
           </p>
         </div>
 

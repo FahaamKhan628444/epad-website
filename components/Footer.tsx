@@ -13,10 +13,10 @@ export default function Footer() {
             <div className="flex items-center gap-4">
 
               <Image
-                src="/image.png"
+                src="/ep main.png"
                 alt="logo"
-                width={80}
-                height={80}
+                width={100}
+                height={100}
                 className="rounded-lg object-contain"
               />
 
@@ -25,9 +25,9 @@ export default function Footer() {
                   Eastpoint Advertising
                 </h2>
 
-                <p className="text-gray-400 mt-1">
+                {/* <p className="text-gray-400 mt-1">
                   One small destination for a complete advertising
-                </p>
+                </p> */}
               </div>
 
             </div>
@@ -61,6 +61,8 @@ export default function Footer() {
               <li>Steel Letters</li>
               <li>Flex Printing</li>
               <li>Glow Sign Boards</li>
+              <li>Digital Printing</li>
+              <li>Neon Signage</li>
             </ul>
           </div>
 
@@ -73,26 +75,30 @@ export default function Footer() {
             <div className="space-y-4 text-gray-300">
 
               <a
-  href="tel:+91959233881"
+  href="tel:+919592338881"
   className="block hover:text-green-400 transition"
 >
-  📞 +91 95923 3881
+  📞 +91 95923 38881
 </a>
-              {/* <p>📞 +91 98154 3881</p> */}
-
+              <a
+  href="tel:+919815478630"
+  className="block hover:text-green-400 transition"
+>
+  📞 +91 98154 38881
+</a>
+ 
              <div className="mt-8 space-y-4 text-gray-300">
 
-              <p>
-                Main office- Opposite Govt. College,
-                Malerkotla (Pb.)
-              </p>
+              <h1>
+               📍 Malerkotla (Pb.) <br /> 40 km. away from Ludhiana
+              </h1>
 
-              <p>
-                Workshop- Inside Delhi Gate,
+              {/* <p>
+                Production unit - Inside Delhi Gate,
                 Malerkotla (Pb.)
-              </p>
+              </p> */}
 
-            </div>
+            </div>     
 {/* 
               <p>
                 🌐 fahaam.in
@@ -105,10 +111,15 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400">
-          © 2026 Eastpoint Advertising — All Rights Reserved
+          © 2026 Eastpoint Advertising Malerkotla — All Rights Reserved. <br /> Designed and Deveoped by{" "} <a href="tel: +916284448162"> <u>Fahaam Khan</u></a>
         </div>
 
       </div>
     </footer>
   );
-}
+}         
+
+
+
+
+
