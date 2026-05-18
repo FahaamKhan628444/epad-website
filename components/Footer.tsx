@@ -81,7 +81,7 @@ export default function Footer() {
   📞 +91 95923 38881
 </a>
               <a
-  href="tel:+919815478630"
+  href="tel:+919815438881"
   className="block hover:text-green-400 transition"
 >
   📞 +91 98154 38881
