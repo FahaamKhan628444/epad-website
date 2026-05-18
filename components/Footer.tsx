@@ -111,7 +111,7 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400">
-          © 2026 Eastpoint Advertising Malerkotla — All Rights Reserved. <br /> Designed and Deveoped by{" "} <a href="tel: +916284448162"> <u>Fahaam Khan</u></a>
+          © 2026 Eastpoint Advertising Malerkotla — All Rights Reserved. <br /> Designed and Developed by{" "} <a href="tel: +916284448162"> <u>Fahaam Khan</u></a>
         </div>
 
       </div>
