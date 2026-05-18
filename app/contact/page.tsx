@@ -348,14 +348,14 @@ export default function ContactPage() {
 
                       <a
                         href="tel:+919592338881"
-                        className="block mt-2 text-2xl font-semibold hover:text-cyan-300 transition"
+                        className="block mt-2 text-xl font-semibold hover:text-cyan-300 transition"
                       >
                         +91 95923 38881
                       </a>
 
                       <a
                         href="tel:+919815438881"
-                        className="block mt-1 text-2xl text-blue-100 hover:text-cyan-300 transition"
+                        className="block mt-1 text-xl text-blue-100 hover:text-cyan-300 transition"
                       >
                         +91 98154 38881
                       </a>
@@ -377,7 +377,7 @@ export default function ContactPage() {
                         Our Address
                       </p>
 
-                      <p className="mt-2 text-lg leading-8 text-blue-100">
+                      <p className="mt-2 text-lg leading-8 text-white-100">
                         Office – Opposite Govt. College, Malerkotla (Pb.)
                         <br />
                         Production unit – Inside Delhi Gate, Malerkotla (Pb.)
