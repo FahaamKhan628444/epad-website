@@ -464,7 +464,7 @@ export default function ServicesPage() {
                 </p>
 
                 <a
-                  href="tel:+91959233881"
+                  href="tel:+919592338881"
                   className="mt-6 inline-block bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
                 >
                   Call Us for more details
