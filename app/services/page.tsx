@@ -480,3 +480,286 @@ export default function ServicesPage() {
     </main>
   );
 }
+
+
+
+
+
+
+
+
+// "use client";
+
+// import { useEffect, useState, useRef } from "react";
+// import Image from "next/image";
+// import {
+//   ChevronLeft,
+//   ChevronRight,
+//   X,
+// } from "lucide-react";
+
+// const services = [
+//   {
+//     title: "Laser Cutting",
+//     desc: "Precision laser cutting solutions for modern signage and industrial branding.",
+//     images: [
+//       "/services/laser.jpg",
+//       "/services/laser2.jpg",
+//       "/services/laser3.jpg",
+//     ],
+//   },
+//   {
+//     title: "ACP Boards",
+//     desc: "Premium ACP board installation for shops, offices and showrooms.",
+//     images: [
+//       "/services/acp.jpeg",
+//       "/services/acp2.jpg",
+//       "/services/acp3.jpg",
+//     ],
+//   },
+//   {
+//     title: "LED Acrylic Letters",
+//     desc: "Modern illuminated acrylic signage with premium finishing.",
+//     images: [
+//       "/services/led.png",
+//       "/services/led2.jpg",
+//       "/services/led3.jpg",
+//     ],
+//   },
+//   {
+//     title: "Steel Letters",
+//     desc: "Durable stainless steel signage for luxury branding.",
+//     images: [
+//       "/services/steel.jpg",
+//       "/services/steel2.jpg",
+//       "/services/steel3.jpg",
+//     ],
+//   },
+//   {
+//     title: "Glow Sign Board",
+//     desc: "Bright and attractive glow sign boards for business visibility.",
+//     images: [
+//       "/services/glow.jpeg",
+//       "/services/glow2.jpg",
+//       "/services/glow3.jpg",
+//     ],
+//   },
+//   {
+//     title: "Indoor Branding",
+//     desc: "High-quality branding solutions for interiors and promotions.",
+//     images: [
+//       "/services/indoor.jpg",
+//       "/services/indoor2.jpg",
+//       "/services/indoor3.jpg",
+//     ],
+//   },
+//   {
+//     title: "Glass OWV & Vinyl",
+//     desc: "Glass branding and one-way vision sticker solutions.",
+//     images: [
+//       "/services/glass.jpeg",
+//       "/services/glass2.jpg",
+//       "/services/glass3.jpg",
+//     ],
+//   },
+//   {
+//     title: "Neon Signage",
+//     desc: "Eye-catching neon signs for modern branding and advertising.",
+//     images: [
+//       "/services/neon3 copy.jpeg",
+//       "/services/neon4 copy.jpg",
+//       "/services/neon1 copy.jpg",
+//       "/services/neon2 copy.jpeg"
+//     ],
+//   },
+// ];
+
+// export default function ServicesPage() {
+//   const sectionRef = useRef(null);
+
+//   const [visible, setVisible] = useState(false);
+
+//   const [selectedService, setSelectedService] = useState<any>(null);
+//   const [currentImage, setCurrentImage] = useState(0);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) setVisible(true);
+//       },
+//       { threshold: 0.15 }
+//     );
+
+//     if (sectionRef.current) observer.observe(sectionRef.current);
+
+//     return () => {
+//       if (sectionRef.current) observer.unobserve(sectionRef.current);
+//     };
+//   }, []);
+
+//   const nextImage = () => {
+//     setCurrentImage((prev: number) =>
+//       prev === selectedService.images.length - 1 ? 0 : prev + 1
+//     );
+//   };
+
+//   const prevImage = () => {
+//     setCurrentImage((prev: number) =>
+//       prev === 0 ? selectedService.images.length - 1 : prev - 1
+//     );
+//   };
+
+//   return (
+//     <>
+//       <main
+//         ref={sectionRef}
+//         className="relative overflow-hidden py-24 bg-gradient-to-b from-white via-gray-50 to-white"
+//       >
+//         {/* BACKGROUND EFFECTS */}
+//         <div className="absolute top-0 left-0 w-80 h-80 bg-blue-200/20 blur-3xl rounded-full" />
+//         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/20 blur-3xl rounded-full" />
+
+//         <div className="container mx-auto px-4 relative z-10">
+//           {/* HEADING */}
+//           <div
+//             className={`text-center mb-20 transition-all duration-700 ${
+//               visible
+//                 ? "opacity-100 translate-y-0"
+//                 : "opacity-0 translate-y-10"
+//             }`}
+//           >
+//             <span className="inline-block px-5 py-2 rounded-full bg-blue-600 text-white text-sm font-medium shadow-md">
+//               Premium Branding Solutions
+//             </span>
+
+//             <h1 className="mt-6 text-5xl md:text-6xl font-extrabold text-gray-900">
+//               Our <span className="text-blue-600">Services</span>
+//             </h1>
+
+//             <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+//               Complete signage and branding solutions designed to help your
+//               business stand out with premium quality and modern finishing.
+//             </p>
+//           </div>
+
+//           {/* SERVICES GRID */}
+//           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
+//             {services.map((service, index) => (
+//               <div
+//                 key={service.title}
+//                 className={`group bg-white/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-gray-200 shadow-lg transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl hover:border-blue-300 ${
+//                   visible
+//                     ? "opacity-100 translate-y-0"
+//                     : "opacity-0 translate-y-12"
+//                 }`}
+//                 style={{
+//                   transitionDelay: `${index * 120}ms`,
+//                 }}
+//               >
+//                 {/* IMAGE */}
+//                 <div className="relative w-full h-72 overflow-hidden">
+//                   <Image
+//                     src={service.images[0]}
+//                     alt={service.title}
+//                     fill
+//                     className="object-cover transition duration-700 group-hover:scale-110"
+//                   />
+//                 </div>
+
+//                 {/* CONTENT */}
+//                 <div className="p-8">
+//                   <h2 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition">
+//                     {service.title}
+//                   </h2>
+
+//                   <p className="mt-4 text-gray-600 leading-7">
+//                     {service.desc}
+//                   </p>
+
+//                   {/* BUTTON OPENS SLIDER */}
+//                   <button
+//                     onClick={() => {
+//                       setSelectedService(service);
+//                       setCurrentImage(0);
+//                     }}
+//                     className="mt-6 inline-flex items-center justify-center bg-gradient-to-r from-blue-700 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition duration-300 shadow-lg"
+//                   >
+//                     View Gallery
+//                   </button>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </main>
+
+//       {/* FULL SCREEN GALLERY MODAL */}
+//       {selectedService && (
+//         <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+//           {/* CLOSE BUTTON */}
+//           <button
+//             onClick={() => setSelectedService(null)}
+//             className="absolute top-6 right-6 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition duration-300"
+//           >
+//             <X className="w-6 h-6" />
+//           </button>
+
+//           {/* LEFT BUTTON */}
+//           <button
+//             onClick={prevImage}
+//             className="absolute left-6 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition duration-300"
+//           >
+//             <ChevronLeft className="w-7 h-7" />
+//           </button>
+
+//           {/* IMAGE */}
+//           <div className="relative w-full max-w-6xl h-[80vh] rounded-3xl overflow-hidden">
+//             <Image
+//               src={selectedService.images[currentImage]}
+//               alt={selectedService.title}
+//               fill
+//               className="object-contain"
+//             />
+//           </div>
+
+//           {/* RIGHT BUTTON */}
+//           <button
+//             onClick={nextImage}
+//             className="absolute right-6 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition duration-300"
+//           >
+//             <ChevronRight className="w-7 h-7" />
+//           </button>
+
+//           {/* TITLE */}
+//           <div className="absolute top-6 left-6 text-white">
+//             <h2 className="text-3xl font-bold">
+//               {selectedService.title}
+//             </h2>
+//           </div>
+
+//           {/* THUMBNAILS */}
+//           <div className="absolute bottom-8 flex gap-3 overflow-x-auto px-4">
+//             {selectedService.images.map((img: string, index: number) => (
+//               <button
+//                 key={index}
+//                 onClick={() => setCurrentImage(index)}
+//                 className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 transition duration-300 ${
+//                   currentImage === index
+//                     ? "border-blue-500 scale-105"
+//                     : "border-white/20"
+//                 }`}
+//               >
+//                 <Image
+//                   src={img}
+//                   alt="thumbnail"
+//                   fill
+//                   className="object-cover"
+//                 />
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// }
