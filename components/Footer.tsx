@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
 
               <Image
-                src="/ep main.png"
+                src="/new ep.png"
                 alt="logo"
                 width={100}
                 height={100}
@@ -87,18 +87,20 @@ export default function Footer() {
   📞 +91 98154 38881
 </a>
  
-             <div className="mt-8 space-y-4 text-gray-300">
+             <div className="flex items-start gap-3">
+  <Image
+    src="/loc.png"
+    alt="Location"
+    width={20}
+    height={20}
+    className="object-contain mt-1"
+  />
 
-              <h1>
-               📍 Malerkotla (Pb.) <br /> 40 km. away from Ludhiana
-              </h1>
-
-              {/* <p>
-                Production unit - Inside Delhi Gate,
-                Malerkotla (Pb.)
-              </p> */}
-
-            </div>     
+  <h1 className="text-lg  leading-relaxed">
+    Malerkotla (Pb.) <br />
+    40 km. away from Ludhiana
+  </h1>
+</div>  
 {/* 
               <p>
                 🌐 fahaam.in

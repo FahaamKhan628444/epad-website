@@ -458,21 +458,22 @@ export default function Navbar() {
               className="flex items-center gap-3 group max-h-[60px]"
             >
               <Image
-                src="/Logo.png"
-                alt="logo"
-                width={170}
-                height={170}
-                className="
-                  w-[110px]
-                  sm:w-[140px]
-                  md:w-[170px]
-                  h-auto
-                  object-contain
-                  transition
-                  duration-500
-                  group-hover:scale-105
-                "
-              />
+  src="/epadnew.png"
+  alt="logo"
+  width={280}
+  height={280}
+  className="
+    w-[220px]
+    sm:w-[250px]  
+    md:w-[250px]
+    lg:w-[250px]  
+    h-auto
+    object-contain
+    transition-all
+    duration-500
+    group-hover:scale-105
+  "
+/>
             </Link>
 
             {/* DESKTOP MENU */}

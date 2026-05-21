@@ -161,7 +161,7 @@ export default function CTA() {
         </p>
 
         {/* BUTTONS */}
-        <div className="mt-12 flex justify-center items-center gap-8 flex-wrap">
+        <div className="mt-12 flex justify-center items-center gap-20 flex-wrap">
 
           {/* CALL */}
           <a
@@ -170,13 +170,13 @@ export default function CTA() {
               visible ? "opacity-100 scale-100" : "opacity-0 scale-75"
             }`}
           >
-            <div className="hover:scale-110 transition duration-300 active:scale-95 drop-shadow-2xl">
+            <div className="hover:scale-110 transition-all duration-300 active:scale-95 drop-shadow-2xl">
               <Image
-                src="/call8.png"
+                src="/calling.png"
                 alt="Call Now"
-                width={130}
-                height={130}
-                className="object-contain"
+                width={80}
+                height={80}
+                className="object-contain w-20 h-20"
               />
             </div>
           </a>
