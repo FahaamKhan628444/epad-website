@@ -340,10 +340,154 @@
 
 
 
+// "use client";
+
+// import { useEffect, useState, useRef } from "react";
+// import Image from "next/image";
+
+// const services = [
+//   {
+//     title: "Laser Cutting",
+//     desc: "Precision laser cutting solutions for modern signage and industrial branding.",
+//     image: "/services/laser.jpg",
+//   },
+//   {
+//     title: "ACP Boards",
+//     desc: "Premium ACP board installation for shops, offices and showrooms.",
+//     image: "/services/acp.jpeg",
+//   },
+//   {
+//     title: "LED Acrylic Letters",
+//     desc: "Modern illuminated acrylic signage with premium finishing.",
+//     image: "/services/led.png",
+//   },
+//   {
+//     title: "Steel Letters",
+//     desc: "Durable stainless steel signage for luxury branding.",
+//     image: "/services/steel.jpg",
+//   },
+//   {
+//     title: "Glow Sign Board",
+//     desc: "Bright and attractive glow sign boards for business visibility.",
+//     image: "/services/glow.jpeg",
+//   },
+//   {
+//     title: "Indoor Branding",
+//     desc: "High-quality branding solutions for interiors and promotions.",
+//     image: "/services/indoor.jpg",
+//   },
+//   {
+//     title: "Glass OWV & Vinyl",
+//     desc: "Glass branding and one-way vision sticker solutions.",
+//     image: "/services/glass.jpeg",
+//   },
+//   {
+//     title: "Neon Signage",
+//     desc: "Eye-catching neon signs for modern branding and advertising.",
+//     image: "/services/neon.jpeg",
+//   },
+// ];
+
+// export default function ServicesPage() {
+//   const sectionRef = useRef(null);
+//   const [visible, setVisible] = useState(false);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) setVisible(true);
+//       },
+//       { threshold: 0.15 }
+//     );
+
+//     if (sectionRef.current) observer.observe(sectionRef.current);
+
+//     return () => {
+//       if (sectionRef.current) observer.unobserve(sectionRef.current);
+//     };
+//   }, []);
+
+//   return (
+//     <main ref={sectionRef} className="section-padding bg-gray-50">
+
+//       <div className="container-custom">
+
+//         {/* HEADING */}
+//         <div
+//           className={`text-center mb-16 transition-all duration-700 ${
+//             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+//           }`}
+//         >
+//           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+//             Our Services
+//           </h1>
+
+//           <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+//             Complete signage and branding solutions designed to help your business
+//             stand out with premium quality and modern finishing.
+//           </p>
+//         </div>
+
+//         {/* GRID */}
+//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+//           {services.map((service, index) => (
+//             <div
+//               key={service.title}
+//               className={`bg-white rounded-3xl overflow-hidden shadow-md border
+//               transition-all duration-700 ease-out
+//               hover:-translate-y-3 hover:shadow-2xl hover:border-gray-300
+//               ${
+//                 visible
+//                   ? "opacity-100 scale-100 translate-y-0"
+//                   : "opacity-0 scale-90 translate-y-10"
+//               }`}
+//               style={{ transitionDelay: `${index * 120}ms` }}
+//             >
+
+//               <div className="relative w-full h-64 overflow-hidden">
+//                 <Image
+//                   src={service.image}
+//                   alt={service.title}
+//                   fill
+//                   className="object-cover transition duration-700 hover:scale-110"
+//                 />
+//               </div>
+
+//               <div className="p-8">
+//                 <h2 className="text-2xl font-bold text-gray-900">
+//                   {service.title}
+//                 </h2>
+
+//                 <p className="mt-4 text-gray-600 leading-7">
+//                   {service.desc}
+//                 </p>
+
+//                 <a
+//                   href="tel:+919592338881"
+//                   className="mt-6 inline-block bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+//                 >
+//                   Call Us for more details
+//                 </a>
+//               </div>
+
+//             </div>
+//           ))}
+
+//         </div>
+
+//       </div>
+//     </main>
+//   );
+// }
+
+
 "use client";
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -408,70 +552,169 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <main ref={sectionRef} className="section-padding bg-gray-50">
-
+    <main
+      ref={sectionRef}
+      className="section-padding bg-gradient-to-b from-gray-50 to-white overflow-hidden"
+    >
       <div className="container-custom">
 
         {/* HEADING */}
-        <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={visible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
             Our Services
           </h1>
 
-          <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-            Complete signage and branding solutions designed to help your business
-            stand out with premium quality and modern finishing.
+          <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg leading-8">
+            Complete signage and branding solutions designed to help your
+            business stand out with premium quality and modern finishing.
           </p>
-        </div>
+        </motion.div>
 
         {/* GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((service, index) => (
-            <div
+            <Tilt
               key={service.title}
-              className={`bg-white rounded-3xl overflow-hidden shadow-md border
-              transition-all duration-700 ease-out
-              hover:-translate-y-3 hover:shadow-2xl hover:border-gray-300
-              ${
-                visible
-                  ? "opacity-100 scale-100 translate-y-0"
-                  : "opacity-0 scale-90 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 120}ms` }}
+              glareEnable={true}
+              glareMaxOpacity={0.15}
+              scale={1.02}
+              tiltMaxAngleX={8}
+              tiltMaxAngleY={8}
+              transitionSpeed={2000}
+              gyroscope={true}
+              tiltEnable={true}
+              className="rounded-3xl"
             >
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="
+                  relative
+                  bg-white
+                  rounded-3xl
+                  overflow-hidden
+                  border
+                  border-gray-200
+                  shadow-lg
+                  hover:shadow-2xl
+                  transition-all
+                  duration-500
+                  group
+                  active:scale-[0.98]
+                  animate-float
+                "
+              >
 
-              <div className="relative w-full h-64 overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover transition duration-700 hover:scale-110"
+                {/* Spotlight Glow */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    opacity-100
+                    md:opacity-0
+                    md:group-hover:opacity-100
+                    transition
+                    duration-700
+                    bg-gradient-to-br
+                    from-blue-100/30
+                    via-transparent
+                    to-cyan-100/20
+                    z-0
+                  "
                 />
-              </div>
 
-              <div className="p-8">
-                <h2 className="text-2xl font-bold text-gray-900">
-                  {service.title}
-                </h2>
+                {/* Shine Reflection */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    z-10
+                    opacity-0
+                    group-hover:opacity-100
+                    transition
+                    duration-1000
+                    before:absolute
+                    before:top-0
+                    before:left-[-100%]
+                    before:w-[50%]
+                    before:h-full
+                    before:bg-gradient-to-r
+                    before:from-transparent
+                    before:via-white/40
+                    before:to-transparent
+                    group-hover:before:left-[150%]
+                    before:transition-all
+                    before:duration-1000
+                  "
+                />
 
-                <p className="mt-4 text-gray-600 leading-7">
-                  {service.desc}
-                </p>
+                {/* IMAGE */}
+                <div className="relative w-full h-64 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="
+                      object-cover
+                      transition-transform
+                      duration-700
+                      group-hover:scale-110
+                    "
+                  />
+                </div>
 
-                <a
-                  href="tel:+919592338881"
-                  className="mt-6 inline-block bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
-                >
-                  Call Us for more details
-                </a>
-              </div>
+                {/* CONTENT */}
+                <div className="relative z-20 p-8">
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    {service.title}
+                  </h2>
 
-            </div>
+                  <p className="mt-4 text-gray-600 leading-7">
+                    {service.desc}
+                  </p>
+
+                  <motion.a
+                    href="tel:+919592338881"
+                    whileHover={{
+                      scale: 1.05,
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                    }}
+                    className="
+                      mt-6
+                      inline-block
+                      bg-gradient-to-r
+                      from-blue-900
+                      to-blue-700
+                      text-white
+                      px-6
+                      py-3
+                      rounded-xl
+                      font-semibold
+                      shadow-lg
+                    "
+                  >
+                    Call Us for more details
+                  </motion.a>
+                </div>
+
+              </motion.div>
+            </Tilt>
           ))}
 
         </div>
@@ -480,7 +723,6 @@ export default function ServicesPage() {
     </main>
   );
 }
-
 
 
 
