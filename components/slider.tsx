@@ -92,7 +92,7 @@ const slides = [
   // "/banner.png",
   // "/laser.jpg",
   // "/banner2.png",
-  "/a1.jpeg",
+  "/happy.jpeg",
   "/go.jpeg",
   "/hz.jpeg",
   "/b.jpeg",
