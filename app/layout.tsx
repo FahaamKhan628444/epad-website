@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import AppleLoader from "@/components/AppleLoader";
 
 export const metadata = {
   title: "EastPoint Advertising",
@@ -18,10 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
-        {/* <WhatsAppButton /> */}
+        <AppleLoader>
+          <Navbar />
+          {children}
+          <Footer />
+          {/* <WhatsAppButton /> */}
+        </AppleLoader>
       </body>
     </html>
   );

@@ -49,3 +49,39 @@ body {
 .floating-image {
   animation: float 5s ease-in-out infinite;
 }
+
+
+
+
+.apple-spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.apple-spinner-blade {
+  position: absolute;
+  left: 28px;
+  top: 3px;
+  width: 4px;
+  height: 14px;
+  border-radius: 999px;
+
+  background: #555;
+
+  opacity: 0;
+  transform-origin: center 27px;
+
+  animation: apple-fade 1s linear infinite;
+  transform: rotate(calc(var(--i) * 30deg));
+  animation-delay: calc(var(--i) * 0.083s);
+}
+
+@keyframes apple-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
