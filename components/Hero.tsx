@@ -394,9 +394,9 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="
               text-xl
-              sm:text-2xl
-              md:text-3xl
-              lg:text-4xl
+              sm:text-xl
+              md:text-2xl
+              lg:text-3xl
               text-gray-900
               leading-snug
               px-8
