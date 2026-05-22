@@ -95,6 +95,8 @@ const slides = [
   "/happy.jpeg",
   "/gajannew.jpeg",
   "/go.jpeg",
+  "/aps.jpeg",
+  "/sps.jpeg",
   "/hz.jpeg",
   "/vm.jpeg",
   "/pr.jpeg",
@@ -102,12 +104,12 @@ const slides = [
   "/adh.jpeg",
   "/d.jpeg",
   "/ka.jpeg",
+  "/cl.jpeg",
   "/f.jpeg",     
   "/g.jpeg",
   // "/wo.jpeg",
   // "/do.jpeg",
   // "/co.jpeg",
-  "/sps.jpeg",
 ]
 
 export default function Slider() {

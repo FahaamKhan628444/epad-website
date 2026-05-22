@@ -157,7 +157,7 @@ export default function CTA() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Contact us today for premium signage, ACP boards, LED letters and printing solutions.
+          Contact us today for Solvent & Digital Printing and Laser cutting Sinages.
         </p>
 
         {/* BUTTONS */}
@@ -174,9 +174,9 @@ export default function CTA() {
               <Image
                 src="/calling.png"
                 alt="Call Now"
-                width={80}
-                height={80}
-                className="object-contain w-20 h-20"
+                width={70}
+                height={70}
+                className="object-contain w-16 h-16"
               />
             </div>
           </a>
@@ -194,8 +194,8 @@ export default function CTA() {
               <Image
                 src="/whats.png"
                 alt="WhatsApp"
-                width={90}
-                height={90}
+                width={70}
+                height={70}
                 className="object-contain"
               />
             </div>
