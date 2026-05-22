@@ -339,7 +339,7 @@ export default function AboutPage() {
                 Founder & Owner
               </span>
 
-              <h2 className="mt-8 text-5xl md:text-6xl font-bold leading-tight">
+              <h2 className="mt-8 text-6xl md:text-7xl font-bold leading-tight">
                 Mr. Adil Khan
               </h2>
 
