@@ -318,269 +318,6 @@
 
 
 
-// "use client";
-
-// import Image from "next/image";
-// import { useEffect, useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-
-// const rotatingTexts = [
-//   "Laser Cutting",
-//   "ACP Boards",
-//   "LED Acrylic Letters",
-//   "Steel Letters",
-//   "Glow Sign Board",
-//   "Indoor Branding",
-//   "Glass OWV & Vinyl",
-//   "Neon Signage",
-//   "Flex Printing",
-// ];
-
-// export default function Hero() {
-//   const [index, setIndex] = useState(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setIndex((prev) => (prev + 1) % rotatingTexts.length);
-//     }, 2100);
-
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <section className="bg-gray-100 section-padding overflow-hidden relative">
-//       <div className="container-custom relative">
-
-//         {/* LEFT FEATHER */}
-//        {/* LEFT FEATHER */}
-// <motion.div
-//   animate={{
-//     y: [0, -12, 8, -6, 0],
-//     x: [0, 10, -6, 5, 0],
-//     rotate: [-4, 3, -2, 2, -4],
-//   }}
-//   transition={{
-//     duration: 8,
-//     repeat: Infinity,
-//     ease: "easeInOut",
-//   }}
-//   className="
-//     absolute
-//     left-[-10px]
-//     sm:left-[-5px]
-//     md:left-[-20px]
-//     top-[42%]
-//     md:top-1/2
-//     -translate-y-1/2
-//     z-10
-//     pointer-events-none
-//   "
-// >
-//   <Image
-//     src="/fl2.png"
-//     alt="Creative Feather"
-//     width={360}
-//     height={360}
-//     priority
-//     className="
-//       w-[120px]
-//       sm:w-[150px]
-//       md:w-[220px]
-//       xl:w-[300px]
-//       2xl:w-[360px]
-//       h-auto
-//       object-contain
-//       opacity-100
-//       drop-shadow-[0_0_25px_rgba(255,180,0,0.18)]
-//     "
-//   />
-// </motion.div>
-
-// {/* RIGHT FEATHER */}
-// <motion.div
-//   animate={{
-//     y: [0, 12, -8, 6, 0],
-//     x: [0, -10, 6, -5, 0],
-//     rotate: [4, -3, 2, -2, 4],
-//   }}
-//   transition={{
-//     duration: 8,
-//     repeat: Infinity,
-//     ease: "easeInOut",
-//   }}
-//   className="
-//     absolute
-//     right-[-10px]
-//     sm:right-[-5px]
-//     md:right-[-20px]
-//     top-[42%]
-//     md:top-1/2
-//     -translate-y-1/2
-//     z-10
-//     pointer-events-none
-//   "
-// >
-//   <Image
-//     src="/fl3.png"
-//     alt="Creative Feather"
-//     width={360}
-//     height={360}
-//     priority
-//     className="
-//       w-[120px]
-//       sm:w-[150px]
-//       md:w-[220px]
-//       xl:w-[300px]
-//       2xl:w-[360px]
-//       h-auto
-//       object-contain
-//       opacity-100
-//       drop-shadow-[0_0_25px_rgba(0,180,255,0.18)]
-//     "
-//   />
-// </motion.div>
-
-//         {/* CENTER CONTENT */}
-//         <div className="text-center max-w-5xl mx-auto relative z-20">
-
-//           {/* MAIN LOGO */}
-//           <motion.div
-//             initial={{ opacity: 0, scale: 0.85, y: -20 }}
-//             animate={{ opacity: 1, scale: 1, y: 0 }}
-//             transition={{ duration: 0.8 }}
-//             className="flex justify-center mb-5"
-//           >
-//             <Image
-//               src="/Logo main.png"
-//               alt="Eastpoint Advertising Logo"
-//               width={500}
-//               height={500}
-//               priority
-//               className="
-//                 w-[300px]
-//                 sm:w-[360px]
-//                 md:w-[430px]
-//                 lg:w-[520px]
-//                 xl:w-[620px]
-//                 h-auto
-//                 object-contain
-//                 drop-shadow-2xl
-//                 transition-all
-//                 duration-500
-//                 hover:scale-105
-//               "
-//             />
-//           </motion.div>
-
-//           {/* HEADING */}
-//           <motion.h2
-//             initial={{ opacity: 0, y: 25 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ delay: 0.2, duration: 0.8 }}
-//             className="
-//               text-xl
-//               sm:text-2xl
-//               md:text-3xl
-//               lg:text-4xl
-//               text-gray-900
-//               leading-snug
-//               px-8
-//               md:px-16
-//             "
-//           >
-//             Premium Signage & Branding Solutions
-//           </motion.h2>
-
-//           {/* SINCE */}
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ delay: 0.3, duration: 0.8 }}
-//             className="mt-5"
-//           >
-//             <span className="text-red-500 text-xl md:text-3xl font-bold">
-//               Since 2002
-//             </span>
-//           </motion.div>
-
-//           {/* ROTATING TEXT */}
-//           <div className="h-[120px] flex items-center justify-center mt-8 overflow-hidden px-4">
-//             <AnimatePresence mode="wait">
-//               <motion.h3
-//                 key={rotatingTexts[index]}
-//                 initial={{ opacity: 0, y: 40 }}
-//                 animate={{ opacity: 1, y: 0 }}
-//                 exit={{ opacity: 0, y: -40 }}
-//                 transition={{ duration: 0.5 }}
-//                 className="
-//                   text-4xl
-//                   sm:text-5xl
-//                   md:text-6xl
-//                   font-extrabold
-//                   bg-gradient-to-r
-//                   from-blue-900
-//                   via-blue-600
-//                   to-cyan-400
-//                   bg-clip-text
-//                   text-transparent
-//                 "
-//               >
-//                 {rotatingTexts[index]}
-//               </motion.h3>
-//             </AnimatePresence>
-//           </div>
-
-//           {/* BUTTON */}
-//           <motion.div
-//             initial={{ opacity: 0, y: 30 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ delay: 0.6, duration: 0.8 }}
-//             className="mt-8"
-//           >
-//             <motion.a
-//               href="/services"
-//               whileHover={{
-//                 scale: 1.05,
-//                 y: -4,
-//               }}
-//               whileTap={{
-//                 scale: 0.95,
-//               }}
-//               className="
-//                 inline-flex
-//                 items-center
-//                 justify-center
-//                 bg-gradient-to-r
-//                 from-blue-900
-//                 to-blue-600
-//                 text-white
-//                 px-8
-//                 md:px-10
-//                 py-4
-//                 rounded-2xl
-//                 text-base
-//                 md:text-xl
-//                 font-bold
-//                 shadow-[0_15px_40px_rgba(37,99,235,0.35)]
-//                 transition-all
-//                 duration-300
-//               "
-//             >
-//               Explore Our Services
-//             </motion.a>
-//           </motion.div>
-
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
-
-
 "use client";
 
 import Image from "next/image";
@@ -614,130 +351,41 @@ export default function Hero() {
     <section className="bg-gray-100 section-padding overflow-hidden relative">
       <div className="container-custom relative">
 
+        {/* LEFT FEATHER */}
+       {/* LEFT FEATHER */}
+
+
         {/* CENTER CONTENT */}
         <div className="text-center max-w-5xl mx-auto relative z-20">
 
-          {/* MAIN LOGO WITH FEATHERS */}
-          <div className="relative flex justify-center items-center mb-5">
-
-            {/* LEFT FEATHER */}
-            <motion.div
-              animate={{
-                y: [0, -12, 8, -6, 0],
-                x: [0, 10, -6, 5, 0],
-                rotate: [-6, 3, -2, 2, -6],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+          {/* MAIN LOGO */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center mb-5"
+          >
+            <Image
+              src="/Logo main.png"
+              alt="Eastpoint Advertising Logo"
+              width={500}
+              height={500}
+              priority
               className="
-                absolute
-                left-[0%]
-                sm:left-[5%]
-                md:left-[8%]
-                lg:left-[10%]
-                top-1/2
-                -translate-y-1/2
-                z-0
-                pointer-events-none
+                w-[300px]
+                sm:w-[360px]
+                md:w-[430px]
+                lg:w-[520px]
+                xl:w-[620px]
+                h-auto
+                object-contain
+                drop-shadow-2xl
+                transition-all
+                duration-500
+                hover:scale-105
               "
-            >
-              <Image
-                src="/fl2.png"
-                alt="Left Feather"
-                width={360}
-                height={360}
-                priority
-                className="
-                  w-[120px]
-                  sm:w-[150px]
-                  md:w-[220px]
-                  xl:w-[300px]
-                  2xl:w-[360px]
-                  h-auto
-                  object-contain
-                  opacity-90
-                  drop-shadow-[0_0_25px_rgba(255,180,0,0.18)]
-                "
-              />
-            </motion.div>
-
-            {/* RIGHT FEATHER */}
-            <motion.div
-              animate={{
-                y: [0, 12, -8, 6, 0],
-                x: [0, -10, 6, -5, 0],
-                rotate: [6, -3, 2, -2, 6],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                absolute
-                right-[0%]
-                sm:right-[5%]
-                md:right-[8%]
-                lg:right-[10%]
-                top-1/2
-                -translate-y-1/2
-                z-0
-                pointer-events-none
-              "
-            >
-              <Image
-                src="/fl3.png"
-                alt="Right Feather"
-                width={360}
-                height={360}
-                priority
-                className="
-                  w-[120px]
-                  sm:w-[150px]
-                  md:w-[220px]
-                  xl:w-[300px]
-                  2xl:w-[360px]
-                  h-auto
-                  object-contain
-                  opacity-90
-                  drop-shadow-[0_0_25px_rgba(0,180,255,0.18)]
-                "
-              />
-            </motion.div>
-
-            {/* MAIN LOGO */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85, y: -20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative z-20"
-            >
-              <Image
-                src="/Logo main.png"
-                alt="Eastpoint Advertising Logo"
-                width={500}
-                height={500}
-                priority
-                className="
-                  w-[300px]
-                  sm:w-[360px]
-                  md:w-[430px]
-                  lg:w-[520px]
-                  xl:w-[620px]
-                  h-auto
-                  object-contain
-                  drop-shadow-2xl
-                  transition-all
-                  duration-500
-                  hover:scale-105
-                "
-              />
-            </motion.div>
-
-          </div>
+            />
+          </motion.div>
 
           {/* HEADING */}
           <motion.h2
@@ -842,3 +490,270 @@ export default function Hero() {
     </section>
   );
 }
+
+
+
+
+
+
+// "use client";
+
+// import Image from "next/image";
+// import { useEffect, useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const rotatingTexts = [
+//   "Laser Cutting",
+//   "ACP Boards",
+//   "LED Acrylic Letters",
+//   "Steel Letters",
+//   "Glow Sign Board",
+//   "Indoor Branding",
+//   "Glass OWV & Vinyl",
+//   "Neon Signage",
+//   "Flex Printing",
+// ];
+
+// export default function Hero() {
+//   const [index, setIndex] = useState(0);
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setIndex((prev) => (prev + 1) % rotatingTexts.length);
+//     }, 2100);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <section className="bg-gray-100 section-padding overflow-hidden relative">
+//       <div className="container-custom relative">
+
+//         {/* CENTER CONTENT */}
+//         <div className="text-center max-w-5xl mx-auto relative z-20">
+
+//           {/* MAIN LOGO WITH FEATHERS */}
+//           <div className="relative flex justify-center items-center mb-5">
+
+//             {/* LEFT FEATHER */}
+//             <motion.div
+//               animate={{
+//                 y: [0, -12, 8, -6, 0],
+//                 x: [0, 10, -6, 5, 0],
+//                 rotate: [-6, 3, -2, 2, -6],
+//               }}
+//               transition={{
+//                 duration: 8,
+//                 repeat: Infinity,
+//                 ease: "easeInOut",
+//               }}
+//               className="
+//                 absolute
+//                 left-[0%]
+//                 sm:left-[5%]
+//                 md:left-[8%]
+//                 lg:left-[10%]
+//                 top-1/2
+//                 -translate-y-1/2
+//                 z-0
+//                 pointer-events-none
+//               "
+//             >
+//               <Image
+//                 src="/fl2.png"
+//                 alt="Left Feather"
+//                 width={360}
+//                 height={360}
+//                 priority
+//                 className="
+//                   w-[120px]
+//                   sm:w-[150px]
+//                   md:w-[220px]
+//                   xl:w-[300px]
+//                   2xl:w-[360px]
+//                   h-auto
+//                   object-contain
+//                   opacity-90
+//                   drop-shadow-[0_0_25px_rgba(255,180,0,0.18)]
+//                 "
+//               />
+//             </motion.div>
+
+//             {/* RIGHT FEATHER */}
+//             <motion.div
+//               animate={{
+//                 y: [0, 12, -8, 6, 0],
+//                 x: [0, -10, 6, -5, 0],
+//                 rotate: [6, -3, 2, -2, 6],
+//               }}
+//               transition={{
+//                 duration: 8,
+//                 repeat: Infinity,
+//                 ease: "easeInOut",
+//               }}
+//               className="
+//                 absolute
+//                 right-[0%]
+//                 sm:right-[5%]
+//                 md:right-[8%]
+//                 lg:right-[10%]
+//                 top-1/2
+//                 -translate-y-1/2
+//                 z-0
+//                 pointer-events-none
+//               "
+//             >
+//               <Image
+//                 src="/fl3.png"
+//                 alt="Right Feather"
+//                 width={360}
+//                 height={360}
+//                 priority
+//                 className="
+//                   w-[120px]
+//                   sm:w-[150px]
+//                   md:w-[220px]
+//                   xl:w-[300px]
+//                   2xl:w-[360px]
+//                   h-auto
+//                   object-contain
+//                   opacity-90
+//                   drop-shadow-[0_0_25px_rgba(0,180,255,0.18)]
+//                 "
+//               />
+//             </motion.div>
+
+//             {/* MAIN LOGO */}
+//             <motion.div
+//               initial={{ opacity: 0, scale: 0.85, y: -20 }}
+//               animate={{ opacity: 1, scale: 1, y: 0 }}
+//               transition={{ duration: 0.8 }}
+//               className="relative z-20"
+//             >
+//               <Image
+//                 src="/Logo main.png"
+//                 alt="Eastpoint Advertising Logo"
+//                 width={500}
+//                 height={500}
+//                 priority
+//                 className="
+//                   w-[300px]
+//                   sm:w-[360px]
+//                   md:w-[430px]
+//                   lg:w-[520px]
+//                   xl:w-[620px]
+//                   h-auto
+//                   object-contain
+//                   drop-shadow-2xl
+//                   transition-all
+//                   duration-500
+//                   hover:scale-105
+//                 "
+//               />
+//             </motion.div>
+
+//           </div>
+
+//           {/* HEADING */}
+//           <motion.h2
+//             initial={{ opacity: 0, y: 25 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.2, duration: 0.8 }}
+//             className="
+//               text-xl
+//               sm:text-2xl
+//               md:text-3xl
+//               lg:text-4xl
+//               text-gray-900
+//               leading-snug
+//               px-8
+//               md:px-16
+//             "
+//           >
+//             Premium Signage & Branding Solutions
+//           </motion.h2>
+
+//           {/* SINCE */}
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.3, duration: 0.8 }}
+//             className="mt-5"
+//           >
+//             <span className="text-red-500 text-xl md:text-3xl font-bold">
+//               Since 2002
+//             </span>
+//           </motion.div>
+
+//           {/* ROTATING TEXT */}
+//           <div className="h-[120px] flex items-center justify-center mt-8 overflow-hidden px-4">
+//             <AnimatePresence mode="wait">
+//               <motion.h3
+//                 key={rotatingTexts[index]}
+//                 initial={{ opacity: 0, y: 40 }}
+//                 animate={{ opacity: 1, y: 0 }}
+//                 exit={{ opacity: 0, y: -40 }}
+//                 transition={{ duration: 0.5 }}
+//                 className="
+//                   text-4xl
+//                   sm:text-5xl
+//                   md:text-6xl
+//                   font-extrabold
+//                   bg-gradient-to-r
+//                   from-blue-900
+//                   via-blue-600
+//                   to-cyan-400
+//                   bg-clip-text
+//                   text-transparent
+//                 "
+//               >
+//                 {rotatingTexts[index]}
+//               </motion.h3>
+//             </AnimatePresence>
+//           </div>
+
+//           {/* BUTTON */}
+//           <motion.div
+//             initial={{ opacity: 0, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.6, duration: 0.8 }}
+//             className="mt-8"
+//           >
+//             <motion.a
+//               href="/services"
+//               whileHover={{
+//                 scale: 1.05,
+//                 y: -4,
+//               }}
+//               whileTap={{
+//                 scale: 0.95,
+//               }}
+//               className="
+//                 inline-flex
+//                 items-center
+//                 justify-center
+//                 bg-gradient-to-r
+//                 from-blue-900
+//                 to-blue-600
+//                 text-white
+//                 px-8
+//                 md:px-10
+//                 py-4
+//                 rounded-2xl
+//                 text-base
+//                 md:text-xl
+//                 font-bold
+//                 shadow-[0_15px_40px_rgba(37,99,235,0.35)]
+//                 transition-all
+//                 duration-300
+//               "
+//             >
+//               Explore Our Services
+//             </motion.a>
+//           </motion.div>
+
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
