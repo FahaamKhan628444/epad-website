@@ -25,9 +25,9 @@ export default function Footer() {
                   Eastpoint Advertising
                 </h2>
 
-                {/* <p className="text-gray-400 mt-1">
-                  One small destination for a complete advertising
-                </p> */}
+                <p className="text-gray-400 mt-1 font-italic">
+                  Old & Famous Advertising Agency of Malerkotla.
+                </p>
               </div>
 
             </div>
