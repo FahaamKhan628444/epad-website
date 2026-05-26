@@ -179,12 +179,12 @@ const services = [
     desc: "Elegant stainless steel lettering crafted for premium commercial branding.",
   },
   {
-    title: "Flex Glow Signs",
+    title: "Glow Sign Board",
     icon: Sparkles,
     desc: "High-impact glow sign boards with vibrant lighting and strong presence.",
   },
   {
-    title: "NL Boards",
+    title: "Open Neon Signages",
     icon: PenTool,
     desc: "Creative neon-light boards customized for shops and businesses.",
   },

@@ -25,9 +25,9 @@ export default function Footer() {
                   Eastpoint Advertising
                 </h2>
 
-                <p className="text-gray-400 mt-1 font-italic">
+                {/* <p className="text-gray-400 mt-1 font-italic">
                   Old & Famous Advertising Agency of Malerkotla.
-                </p>
+                </p> */}
               </div>
 
             </div>
@@ -113,7 +113,7 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400">
-          © 2026 Eastpoint Advertising. <br/> All Rights Reserved. <br /> Designed and Developed by{" "} <a href="tel: +916284448162"> <u>Fahaam Khan</u></a>
+          © 2026 Eastpoint Advertising. All Rights Reserved. <br /> Designed and Developed by{" "} <a href="tel: +916284448162"> <u>Fahaam Khan</u></a>
         </div>
 
       </div>

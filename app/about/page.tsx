@@ -339,8 +339,8 @@ export default function AboutPage() {
                 Founder & Owner
               </span>
 
-              <h2 className="mt-8 text-6xl md:text-7xl font-bold leading-tight">
-                Mr. Adil Khan
+              <h2 className="mt-8 text-4xl md:text-5xl font-bold leading-tight">
+                Mr. Adil Khan 
               </h2>
 
               <p className="mt-8 text-blue-100 text-lg leading-9">
@@ -356,7 +356,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="bg-white/10 border border-white/10 p-6 rounded-3xl backdrop-blur-sm transition hover:scale-105 duration-300">
-                  <h3 className="text-4xl font-bold">1K+</h3>
+                  <h3 className="text-4xl font-bold">10K+</h3>
                   <p className="mt-2 text-blue-100">Projects Completed</p>
                 </div>
 
@@ -401,7 +401,7 @@ export default function AboutPage() {
                 },
                 {
                   icon: Users,
-                  title: "1000+ Clients",
+                  title: "5000+ Clients", 
                   desc: "Trusted by shops, offices, showrooms and brands.",
                 },
                 {
