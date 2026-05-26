@@ -197,17 +197,17 @@ export default function Slider() {
 
       {/* SLIDER */}
       <Swiper
-        modules={[Autoplay, Pagination]}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        speed={1000}
-        loop
-      >
+  modules={[Autoplay, Pagination]}
+  autoplay={{
+    delay: 6000, // stays longer on each slide
+    disableOnInteraction: false,
+  }}
+  pagination={{
+    clickable: true,
+  }}
+  speed={1000} // smoother/slower transition
+  loop
+>
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="relative w-full h-[70vh] overflow-hidden">
