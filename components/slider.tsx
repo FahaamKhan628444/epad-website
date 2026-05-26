@@ -147,12 +147,12 @@ const slides = [
   {
     image: "/rs.jpeg",
     title: "Golden Steel Letters",
-    subtitle: "Golden S.S Letters with Acrlyic Letters",
+    subtitle: "With Acrlyic Letters",
   },
   {
     image: "/heri.jpeg",
     title: "Golden Steel Letters",
-    subtitle: "Golden S.S Letters for Receptions and Offices",
+    subtitle: "For Receptions and Offices",
   },
   {
     image: "/f.jpeg",

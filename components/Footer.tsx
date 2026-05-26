@@ -25,7 +25,7 @@ export default function Footer() {
                   Eastpoint Advertising
                 </h2>
 
-                {/* <p className="text-gray-400 mt-1 font-italic">
+                {/* <p className="text-gray-400 mt-1 italic">
                   Old & Famous Advertising Agency of Malerkotla.
                 </p> */}
               </div>
@@ -54,15 +54,15 @@ export default function Footer() {
               Our Services
             </h3>
 
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-xl text-gray-300">
               <li>Laser Cutting</li>
               <li>ACP Boards</li>
               <li>LED Acrylic Letters</li>
               <li>Steel Letters</li>
-              <li>Flex Printing</li>
               <li>Glow Sign Boards</li>
               <li>Digital Printing</li>
               <li>Neon Signage</li>
+              <li>Flex Printing</li>
             </ul>
           </div>
 
@@ -75,34 +75,37 @@ export default function Footer() {
             <div className="space-y-4 text-gray-300">
 
               <a
-  href="tel:+919592338881"
-  className="block hover:text-green-400 transition"
->
-  📞 +91 95923 38881
-</a>
-              <a
-  href="tel:+919815438881"
-  className="block hover:text-green-400 transition"
->
-  📞 +91 98154 38881
-</a>
- 
-             <div className="flex items-start gap-3">
-  <Image
-    src="/loc.png"
-    alt="Location"
-    width={20}
-    height={20}
-    className="object-contain mt-1"
-  />
+                href="tel:+919592338881"
+                className="flex items-center gap-2 text-lg hover:text-green-400 transition"
+              >
+                <span>📞</span>
+                <span>+91 95923 38881</span>
+              </a>
 
-  <h1 className="text-lg  leading-relaxed">
-    Malerkotla (Pb.) <br />
-    40 km. away from Ludhiana
-  </h1>
-</div>  
-{/* 
-              <p>
+              <a
+                href="tel:+919815438881"
+                className="flex items-center gap-2 text-lg hover:text-green-400 transition"
+              >
+                <span>📞</span>
+                <span>+91 98154 38881</span>
+              </a>
+
+              <div className="flex items-start gap-3">
+                <Image
+                  src="/loc.png"
+                  alt="Location"
+                  width={20}
+                  height={20}
+                  className="object-contain mt-1"
+                />
+
+                <h1 className="text-lg leading-relaxed">
+                  Opp. Govt. College, Malerkotla (Pb.) <br />
+                  40 km. away from Ludhiana
+                </h1>
+              </div>
+
+              {/* <p>
                 🌐 fahaam.in
               </p> */}
 
@@ -112,16 +115,19 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400">
-          © 2026 Eastpoint Advertising. All Rights Reserved. <br /> Designed and Developed by{" "} <a href="tel: +916284448162"> <u>Fahaam Khan</u></a>
+        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-sm md:text-base">
+          © 2026 Eastpoint Advertising. <br />
+          All Rights Reserved. <br />
+          Designed and Developed by{" "}
+          <a
+            href="tel:+916284448162"
+            className="underline hover:text-white transition"
+          >
+            Fahaam Khan
+          </a>
         </div>
 
       </div>
     </footer>
   );
-}         
- 
-
-
-
-
+}

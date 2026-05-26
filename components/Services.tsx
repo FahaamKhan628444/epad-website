@@ -191,12 +191,12 @@ const services = [
   {
     title: "Sunboard Printing",
     icon: Printer,
-    desc: "High-resolution sunboard printing for advertisements and promotions.",
+    desc: "High-resolution sunboard printing for indoor branding and promotions.",
   },
   {
-    title: "Glass OWV",
+    title: "Glass OWV - Vinyl",  
     icon: GlassWater,
-    desc: "Professional one-way vision glass graphics for branding and privacy.",
+    desc: "Professional one-way vision - vinyl for glass branding and privacy.",
   },
   {
     title: "Flex Printing",

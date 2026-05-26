@@ -292,7 +292,8 @@ export default function ContactPage() {
           </h1>
 
           <p className="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">
-            Get in touch for premium signage, branding, printing and advertising solutions.
+            Get in touch for premium signage, branding, printing and advertising
+            solutions.
           </p>
         </div>
 
@@ -334,7 +335,9 @@ export default function ContactPage() {
                   {/* PHONE */}
                   <div
                     className={`flex items-start gap-5 transition-all duration-700 delay-100 ${
-                      visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
+                      visible
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 -translate-x-6"
                     }`}
                   >
                     <div className="bg-white/10 p-4 rounded-2xl border border-white/10 transition hover:scale-105">
@@ -365,7 +368,9 @@ export default function ContactPage() {
                   {/* ADDRESS */}
                   <div
                     className={`flex items-start gap-5 transition-all duration-700 delay-200 ${
-                      visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
+                      visible
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 -translate-x-6"
                     }`}
                   >
                     <div className="bg-white/10 p-4 rounded-2xl border border-white/10 transition hover:scale-105">
@@ -378,9 +383,9 @@ export default function ContactPage() {
                       </p>
 
                       <p className="mt-2 text-lg leading-8 text-white-100">
-                        Office – Opposite Govt. College, Malerkotla (Pb.)
+                        Office – Opposite Govt. College, Malerkotla (Punjab)
                         <br />
-                        Production unit – Inside Delhi Gate, Malerkotla (Pb.)
+                        Production unit – Inside Delhi Gate, Malerkotla
                       </p>
                     </div>
                   </div>
@@ -390,35 +395,41 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* RIGHT SIDE MAP */}
-            <div className="p-6 md:p-8 bg-gray-50 flex items-center justify-center">
+            {/* RIGHT SIDE IMAGE */}
+            <div className="bg-gray-50 p-6 md:p-8 flex items-center justify-center">
 
-              <a
-                href="https://maps.google.com/?q=Opposite+Govt.+College+Malerkotla+Punjab"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`w-full group transition-all duration-700 delay-300 ${
-                  visible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              <div
+                className={`w-full max-w-[500px] transition-all duration-700 delay-300 ${
+                  visible
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-95"
                 }`}
               >
-                <div className="bg-white p-4 rounded-[30px] shadow-xl hover:shadow-2xl transition duration-500 hover:-translate-y-2">
+                <div className="bg-white rounded-[30px] shadow-xl overflow-hidden p-5">
 
-                  <iframe
-                    src="https://www.google.com/maps?q=Opposite+Govt.+College+Malerkotla+Punjab&output=embed"
-                    width="100%"
-                    height="500"
-                    loading="lazy"
-                    className="rounded-[25px] border-0"
-                  ></iframe>
-
-                  <div className="mt-5 text-center">
-                    <span className="inline-flex items-center gap-2 bg-blue-900 text-white px-6 py-3 rounded-2xl font-semibold group-hover:scale-105 transition">
-                      📍 Open in Google Maps
-                    </span>
+                  {/* SQUARE IMAGE CONTAINER */}
+                  <div className="w-full aspect-square bg-gray-100 rounded-[20px] flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/b.jpeg"
+                      alt="Eastpoint Advertising"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
 
+                  {/* BUTTON */}
+                  <div className="mt-6 text-center">
+  <a
+    href="https://maps.app.goo.gl/7gf7YSMm9dr9RTiA9"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 bg-blue-900 hover:bg-black transition text-white px-6 py-3 rounded-2xl font-semibold"
+  >
+    📍 Open in Google Maps
+  </a>
+</div>
+
                 </div>
-              </a>
+              </div>
 
             </div>
 

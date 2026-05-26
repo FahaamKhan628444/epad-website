@@ -312,8 +312,9 @@ export default function AboutPage() {
           </h1>
 
           <p className="mt-6 text-gray-600 text-lg max-w-3xl mx-auto leading-8">
-            We deliver premium signage, ACP boards, LED letters, glow signs, steel letters
-            and complete branding solutions with modern designs and professional finishing.
+            We deliver premium signage, ACP boards, LED letters, glow signs,
+            steel letters and complete branding solutions with modern designs
+            and professional finishing.
           </p>
         </div>
 
@@ -325,7 +326,9 @@ export default function AboutPage() {
             className={`bg-gradient-to-br from-blue-950 via-blue-900 to-black text-white p-10 md:p-14 rounded-[35px]
             shadow-2xl relative overflow-hidden transition-all duration-700
             ${
-              visible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-10"
+              visible
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-95 translate-y-10"
             }`}
           >
 
@@ -340,11 +343,16 @@ export default function AboutPage() {
               </span>
 
               <h2 className="mt-8 text-4xl md:text-5xl font-bold leading-tight">
-                Mr. Adil Khan 
-              </h2>
+  Mr. Adil Khan
+</h2>
+
+<p className="ml-[89px] mt-1 text-[10px] md:text-xs text-cyan-300 tracking-[0.2em] uppercase font-medium">
+  Expert from Dubai (UAE)
+</p>
 
               <p className="mt-8 text-blue-100 text-lg leading-9">
-                Leading Eastpoint Advertising with creativity, premium craftsmanship and trusted branding solutions for businesses since 2002.
+                Leading Eastpoint Advertising with creativity, premium craftsmanship
+                and trusted branding solutions for businesses since 2002.
               </p>
 
               {/* STATS */}
@@ -382,7 +390,8 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-8 text-gray-600 text-lg leading-9">
-              Our mission is to help businesses grow with eye-catching, durable and modern branding solutions.
+              Our mission is to help businesses grow with eye-catching,
+              durable and modern branding solutions.
             </p>
 
             {/* FEATURES */}
@@ -401,7 +410,7 @@ export default function AboutPage() {
                 },
                 {
                   icon: Users,
-                  title: "5000+ Clients", 
+                  title: "5000+ Clients",
                   desc: "Trusted by shops, offices, showrooms and brands.",
                 },
                 {

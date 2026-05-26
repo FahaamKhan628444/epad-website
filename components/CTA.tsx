@@ -157,7 +157,7 @@ export default function CTA() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Contact us today for Solvent & Digital Printing and Laser cutting Sinages.
+          Contact us today for Solvent & Digital Printing <br /> and Laser cutting Sinages.
         </p>
 
         {/* BUTTONS */}
