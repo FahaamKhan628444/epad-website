@@ -267,7 +267,7 @@ import {
   Award,
   Briefcase,
   Star,
-  Users,
+ Users,
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -306,12 +306,12 @@ export default function AboutPage() {
             ABOUT EASTPOINT ADVERTISING
           </span>
 
-          <h1 className="mt-6 text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
             Crafting Premium <br />
             Branding Since 2002
           </h1>
 
-          <p className="mt-6 text-gray-600 text-lg max-w-3xl mx-auto leading-8">
+          <p className="mt-6 text-gray-600 text-base sm:text-lg max-w-3xl mx-auto leading-8 px-2">
             We deliver premium signage, ACP boards, LED letters, glow signs,
             steel letters and complete branding solutions with modern designs
             and professional finishing.
@@ -323,7 +323,7 @@ export default function AboutPage() {
 
           {/* OWNER SECTION */}
           <div
-            className={`bg-gradient-to-br from-blue-950 via-blue-900 to-black text-white p-10 md:p-14 rounded-[35px]
+            className={`bg-gradient-to-br from-blue-950 via-blue-900 to-black text-white p-8 sm:p-10 md:p-14 rounded-[35px]
             shadow-2xl relative overflow-hidden transition-all duration-700
             ${
               visible
@@ -338,34 +338,38 @@ export default function AboutPage() {
 
             <div className="relative z-10">
 
-              <span className="bg-white/10 border border-white/20 px-5 py-2 rounded-full text-sm tracking-wider uppercase">
+              <span className="bg-white/10 border border-white/20 px-5 py-2 rounded-full text-xs sm:text-sm tracking-wider uppercase">
                 Founder & Owner
               </span>
 
-              <h2 className="mt-8 text-4xl md:text-5xl font-bold leading-tight">
-  Mr. Adil Khan
-</h2>
+              <h2 className="mt-8 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                Mr. Adil Khan
+              </h2>
 
-<p className="ml-[89px] mt-1 text-[10px] md:text-xs text-cyan-300 tracking-[0.2em] uppercase font-medium">
-  Expert from Dubai (UAE)
-</p>
+              <p className="mt-2 md:mt-1 text-[11px] sm:text-xs md:text-sm text-cyan-300 tracking-[0.15em] uppercase font-medium md:ml-[90px]">
+                Expert from Dubai (UAE)
+              </p>
 
-              <p className="mt-8 text-blue-100 text-lg leading-9">
+              <p className="mt-8 text-blue-100 text-base sm:text-lg leading-8 sm:leading-9">
                 Leading Eastpoint Advertising with creativity, premium craftsmanship
                 and trusted branding solutions for businesses since 2002.
               </p>
 
               {/* STATS */}
-              <div className="mt-12 grid grid-cols-2 gap-6">
+              <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6">
 
-                <div className="bg-white/10 border border-white/10 p-6 rounded-3xl backdrop-blur-sm transition hover:scale-105 duration-300">
-                  <h3 className="text-4xl font-bold">24+</h3>
-                  <p className="mt-2 text-blue-100">Years Experience</p>
+                <div className="bg-white/10 border border-white/10 p-5 sm:p-6 rounded-3xl backdrop-blur-sm transition hover:scale-105 duration-300">
+                  <h3 className="text-3xl sm:text-4xl font-bold">24+</h3>
+                  <p className="mt-2 text-sm sm:text-base text-blue-100">
+                    Years Experience
+                  </p>
                 </div>
 
-                <div className="bg-white/10 border border-white/10 p-6 rounded-3xl backdrop-blur-sm transition hover:scale-105 duration-300">
-                  <h3 className="text-4xl font-bold">10K+</h3>
-                  <p className="mt-2 text-blue-100">Projects Completed</p>
+                <div className="bg-white/10 border border-white/10 p-5 sm:p-6 rounded-3xl backdrop-blur-sm transition hover:scale-105 duration-300">
+                  <h3 className="text-3xl sm:text-4xl font-bold">10K+</h3>
+                  <p className="mt-2 text-sm sm:text-base text-blue-100">
+                    Projects Completed
+                  </p>
                 </div>
 
               </div>
@@ -384,12 +388,12 @@ export default function AboutPage() {
               WHY CHOOSE US
             </span>
 
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Trusted Signage <br />
               Solutions For Brands
             </h2>
 
-            <p className="mt-8 text-gray-600 text-lg leading-9">
+            <p className="mt-8 text-gray-600 text-base sm:text-lg leading-8 sm:leading-9">
               Our mission is to help businesses grow with eye-catching,
               durable and modern branding solutions.
             </p>
@@ -421,7 +425,7 @@ export default function AboutPage() {
               ].map((item, index) => (
                 <div
                   key={item.title}
-                  className={`bg-white p-7 rounded-3xl shadow-lg border border-gray-100
+                  className={`bg-white p-6 sm:p-7 rounded-3xl shadow-lg border border-gray-100
                   transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl
                   ${
                     visible
@@ -432,13 +436,13 @@ export default function AboutPage() {
                     transitionDelay: `${index * 120}ms`,
                   }}
                 >
-                  <item.icon className="w-10 h-10 text-blue-900" />
+                  <item.icon className="w-9 h-9 sm:w-10 sm:h-10 text-blue-900" />
 
-                  <h3 className="mt-5 text-2xl font-bold">
+                  <h3 className="mt-5 text-xl sm:text-2xl font-bold">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-gray-600 leading-7">
+                  <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
                     {item.desc}
                   </p>
                 </div>
