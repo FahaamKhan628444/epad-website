@@ -348,16 +348,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="bg-gray-100 section-padding overflow-hidden relative">
+    <section className="bg-gray-100 section-padding overflow-hidden relative min-h-screen">
 
       {/* TOP LEFT FEATHER */}
       <motion.div
         initial={{ opacity: 0, x: -80, y: -80 }}
-        animate={{ opacity: 0.9, x: 0, y: 0 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 1 }}
         className="
           absolute
-          top-0
+          top-4
           left-0
           z-10
           pointer-events-none
@@ -365,49 +365,84 @@ export default function Hero() {
       >
         <Image
           src="/fl3.png"
-          alt="Feather"
-          width={320}
-          height={320}
+          alt="Left Feather"
+          width={400}
+          height={400}
+          priority
           className="
-            w-[140px]
-            sm:w-[180px]
-            md:w-[240px]
-            lg:w-[300px]
+            w-[75px]
+            sm:w-[95px] 
+            md:w-[120px]
+            lg:w-[145px] 
+            xl:w-[155px] 
             h-auto
             object-contain
-            rotate-[-18deg]
-            opacity-80
           "
         />
       </motion.div>
 
-      {/* BOTTOM RIGHT FEATHER */}
+      {/* RIGHT FEATHER */}
       <motion.div
-        initial={{ opacity: 0, x: 80, y: 80 }}
-        animate={{ opacity: 0.9, x: 0, y: 0 }}
+        initial={{ opacity: 0, x: 80, y: 40 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 1 }}
         className="
           absolute
-          bottom-0
+          top-[48%]
           right-0
           z-10
           pointer-events-none
+          translate-y-[-50%]
         "
       >
         <Image
           src="/fl2.png"
-          alt="Feather"
-          width={340}
-          height={340}
+          alt="Right Feather"
+          width={240}
+          height={240}
+          priority
           className="
-            w-[150px]
-            sm:w-[200px]
-            md:w-[260px]
-            lg:w-[320px]
+            w-[80px]
+            sm:w-[95px]
+            md:w-[120px]
+            lg:w-[145px]
+            xl:w-[165px]
             h-auto
             object-contain
-            rotate-[18deg]
-            opacity-80
+          "
+        />
+      </motion.div>
+
+      {/* NEW SMALL LEFT FEATHER BESIDE HEADING */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className="
+          absolute
+          top-[40%]
+          left-10
+          sm:left-15
+          md:left-15
+          lg:left-60
+          z-10
+          pointer-events-none
+        "
+      > 
+        <Image
+          src="/fl1.png"
+          alt="Small Feather"
+          width={180}
+          height={180}
+          priority
+          className="
+            w-[65px]
+            sm:w-[80px]
+            md:w-[100px]
+            lg:w-[120px]
+            xl:w-[100px]
+            h-auto
+            object-contain
           "
         />
       </motion.div>

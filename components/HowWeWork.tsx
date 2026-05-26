@@ -1,17 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const videos = [
   {
-  title: "Laser Cutting",
-  desc: "High-precision laser cutting process designed for modern signage, branding and premium finishing.",
-  video: "/videos/work1.mp4",
-},
+    title: "Laser Cutting",
+    desc: "High-precision laser cutting process designed for modern signage, branding and premium finishing.",
+    video: "/videos/work1.mp4",
+  },
   {
     title: "Professional Installation Process",
     desc: "Carefully crafted branding and installation workflow for modern businesses.",
     video: "/videos/work2.mp4",
+  },
+  {
+    title: "Latest Branding and Elevation Project",
+    desc: "Creative fabrication and premium branding solutions crafted with perfection.",
+    video: "/videos/newvid.mp4",
   },
 ];
 
@@ -39,77 +49,99 @@ export default function HowWeWork() {
           </p>
         </motion.div>
 
-        {/* VIDEOS */}
-        <div className="grid lg:grid-cols-2 gap-10">
+        {/* VIDEO SLIDER */}
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{
+            delay: 8500, 
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+          }}
+          className="pb-14"
+        >
 
           {videos.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.2,
-              }}
-              viewport={{ once: true }}
-              whileHover={{
-                y: -8,
-              }}
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-[32px]
-                bg-white/70
-                backdrop-blur-xl
-                border
-                border-white/30
-                shadow-2xl
-              "
-            >
+            <SwiperSlide key={index}>
 
-              {/* VIDEO */}
-              <div className="relative overflow-hidden">
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.2,
+                }}
+                viewport={{ once: true }}
+                whileHover={{
+                  y: -8,
+                }}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[32px]
+                  bg-white/70
+                  backdrop-blur-xl
+                  border
+                  border-white/30
+                  shadow-2xl
+                  h-full
+                "
+              >
 
-                <video
-                  src={item.video}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="
-                    w-full
-                    h-[300px]
-                    md:h-[420px]
-                    object-cover
-                    transition-transform
-                    duration-700
-                    group-hover:scale-105
-                  "
-                />
+                {/* VIDEO */}
+                <div className="relative overflow-hidden">
 
-                {/* DARK OVERLAY */}
-                <div className="absolute inset-0 bg-black/20" />
+                  <video
+                    src={item.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="
+                      w-full
+                      h-[300px]
+                      md:h-[420px]
+                      object-cover
+                      transition-transform
+                      duration-700
+                      group-hover:scale-105
+                    "
+                  />
 
-              </div>
+                  {/* OVERLAY */}
+                  <div className="absolute inset-0 bg-black/20" />
 
-              {/* CONTENT */}
-              <div className="p-8">
+                </div>
 
-                <h3 className="text-2xl font-bold text-gray-900">
-                  {item.title}
-                </h3>
+                {/* CONTENT */}
+                <div className="p-8">
 
-                <p className="mt-4 text-gray-600 leading-7">
-                  {item.desc}
-                </p>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {item.title}
+                  </h3>
 
-              </div>
+                  <p className="mt-4 text-gray-600 leading-7">
+                    {item.desc}
+                  </p>
 
-            </motion.div>
+                </div>
+
+              </motion.div>
+
+            </SwiperSlide>
           ))}
 
-        </div>
+        </Swiper>
 
       </div>
 
