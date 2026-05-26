@@ -349,6 +349,69 @@ export default function Hero() {
 
   return (
     <section className="bg-gray-100 section-padding overflow-hidden relative">
+
+      {/* TOP LEFT FEATHER */}
+      <motion.div
+        initial={{ opacity: 0, x: -80, y: -80 }}
+        animate={{ opacity: 0.9, x: 0, y: 0 }}
+        transition={{ duration: 1 }}
+        className="
+          absolute
+          top-0
+          left-0
+          z-10
+          pointer-events-none
+        "
+      >
+        <Image
+          src="/fl3.png"
+          alt="Feather"
+          width={320}
+          height={320}
+          className="
+            w-[140px]
+            sm:w-[180px]
+            md:w-[240px]
+            lg:w-[300px]
+            h-auto
+            object-contain
+            rotate-[-18deg]
+            opacity-80
+          "
+        />
+      </motion.div>
+
+      {/* BOTTOM RIGHT FEATHER */}
+      <motion.div
+        initial={{ opacity: 0, x: 80, y: 80 }}
+        animate={{ opacity: 0.9, x: 0, y: 0 }}
+        transition={{ duration: 1 }}
+        className="
+          absolute
+          bottom-0
+          right-0
+          z-10
+          pointer-events-none
+        "
+      >
+        <Image
+          src="/fl2.png"
+          alt="Feather"
+          width={340}
+          height={340}
+          className="
+            w-[150px]
+            sm:w-[200px]
+            md:w-[260px]
+            lg:w-[320px]
+            h-auto
+            object-contain
+            rotate-[18deg]
+            opacity-80
+          "
+        />
+      </motion.div>
+
       <div className="container-custom relative">
 
         {/* CENTER CONTENT */}

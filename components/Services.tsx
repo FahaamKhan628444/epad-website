@@ -194,9 +194,9 @@ const services = [
     desc: "High-resolution sunboard printing for indoor branding and promotions.",
   },
   {
-    title: "Glass OWV - Vinyl",  
+    title: "Glass OWV/Vinyl",  
     icon: GlassWater,
-    desc: "Professional one-way vision - vinyl for glass branding and privacy.",
+    desc: "Professional one-way vision/vinyl for glass branding and privacy.",
   },
   {
     title: "Flex Printing",
