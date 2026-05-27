@@ -353,9 +353,12 @@ export default function Hero() {
         bg-gray-100
         overflow-hidden
         relative
-        pt-6
-        pb-10
+        min-h-[82vh]
         md:min-h-screen
+        flex
+        items-center
+        py-12
+        md:py-20
       "
     >
 
@@ -397,7 +400,7 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="
           absolute
-          top-[48%]
+          top-[50%]
           right-0
           z-10
           pointer-events-none
@@ -429,10 +432,10 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="
           absolute
-          top-[40%]
-          left-10
-          sm:left-15
-          md:left-15
+          top-[42%]
+          left-6
+          sm:left-10
+          md:left-16
           lg:left-60
           z-10
           pointer-events-none
@@ -456,7 +459,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="container-custom relative">
+      <div className="container-custom relative w-full">
 
         {/* CENTER CONTENT */}
         <div className="text-center max-w-5xl mx-auto relative z-20">
@@ -466,7 +469,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.85, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex justify-center mb-5"
+            className="flex justify-center mb-6"
           >
             <Image
               src="/Logo main.png"
@@ -475,11 +478,11 @@ export default function Hero() {
               height={500}
               priority
               className="
-                w-[220px]
-                sm:w-[260px]
-                md:w-[320px]
-                lg:w-[380px]
-                xl:w-[460px]
+                w-[230px]
+                sm:w-[280px]
+                md:w-[340px]
+                lg:w-[400px]
+                xl:w-[470px]
                 h-auto
                 object-contain
                 drop-shadow-2xl
@@ -496,14 +499,15 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="
-              text-lg
-              sm:text-xl
-              md:text-xl
-              lg:text-2xl
+              text-xl
+              sm:text-2xl
+              md:text-2xl
+              lg:text-3xl
               text-gray-900
               leading-snug
               px-6
               md:px-16
+              font-medium
             "
           >
             Oldest & Famous Signages Specialists in Town
@@ -514,15 +518,15 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="mt-4"
+            className="mt-5"
           >
-            <span className="text-red-500 text-lg md:text-2xl font-bold">
+            <span className="text-red-500 text-2xl md:text-3xl font-bold">
               Since 2002
             </span>
           </motion.div>
 
           {/* ROTATING TEXT */}
-          <div className="h-[70px] md:h-[100px] flex items-center justify-center mt-4 overflow-hidden px-4">
+          <div className="h-[85px] md:h-[110px] flex items-center justify-center mt-5 overflow-hidden px-4">
             <AnimatePresence mode="wait">
               <motion.h3
                 key={rotatingTexts[index]}
@@ -531,9 +535,9 @@ export default function Hero() {
                 exit={{ opacity: 0, y: -40 }}
                 transition={{ duration: 0.5 }}
                 className="
-                  text-2xl
-                  sm:text-3xl
-                  md:text-4xl
+                  text-3xl
+                  sm:text-4xl
+                  md:text-5xl
                   font-extrabold
                   bg-gradient-to-r
                   from-blue-900
@@ -553,7 +557,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="mt-4"
+            className="mt-5"
           >
             <motion.a
               href="/services"
@@ -572,11 +576,11 @@ export default function Hero() {
                 from-blue-900
                 to-blue-600
                 text-white
-                px-7
-                md:px-10
-                py-3
+                px-8
+                md:px-11
+                py-3.5
                 rounded-2xl
-                text-sm
+                text-base
                 md:text-lg
                 font-bold
                 shadow-[0_15px_40px_rgba(37,99,235,0.35)]
