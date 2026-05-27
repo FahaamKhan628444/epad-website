@@ -348,7 +348,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="bg-gray-100 section-padding overflow-hidden relative min-h-screen">
+    <section
+      className="
+        bg-gray-100
+        overflow-hidden
+        relative
+        pt-6
+        pb-10
+        md:min-h-screen
+      "
+    >
 
       {/* TOP LEFT FEATHER */}
       <motion.div
@@ -371,10 +380,10 @@ export default function Hero() {
           priority
           className="
             w-[75px]
-            sm:w-[95px] 
+            sm:w-[95px]
             md:w-[120px]
-            lg:w-[145px] 
-            xl:w-[155px] 
+            lg:w-[145px]
+            xl:w-[155px]
             h-auto
             object-contain
           "
@@ -413,7 +422,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* NEW SMALL LEFT FEATHER BESIDE HEADING */}
+      {/* SMALL LEFT FEATHER */}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
@@ -428,7 +437,7 @@ export default function Hero() {
           z-10
           pointer-events-none
         "
-      > 
+      >
         <Image
           src="/fl1.png"
           alt="Small Feather"
@@ -513,7 +522,7 @@ export default function Hero() {
           </motion.div>
 
           {/* ROTATING TEXT */}
-          <div className="h-[100px] flex items-center justify-center mt-6 overflow-hidden px-4">
+          <div className="h-[70px] md:h-[100px] flex items-center justify-center mt-4 overflow-hidden px-4">
             <AnimatePresence mode="wait">
               <motion.h3
                 key={rotatingTexts[index]}
@@ -544,7 +553,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="mt-6"
+            className="mt-4"
           >
             <motion.a
               href="/services"
@@ -584,7 +593,6 @@ export default function Hero() {
     </section>
   );
 }
-
 
 
 
