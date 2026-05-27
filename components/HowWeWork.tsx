@@ -21,7 +21,12 @@ const videos = [
   {
     title: "Latest Branding and Elevation Project",
     desc: "Creative fabrication and premium branding solutions crafted with perfection.",
-    video: "/videos/newvid.mp4",
+    video: "/videos/newvid2.mp4",
+  },
+  {
+    title: "Perfection from Fabrication to Installation",
+    desc: "Crafting modern branding solutions with care, from fabrication to installation.",
+    video: "/videos/newvid3.mp4",
   },
 ];
 
