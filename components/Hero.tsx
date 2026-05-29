@@ -502,7 +502,7 @@ export default function Hero() {
               text-xl
               sm:text-2xl
               md:text-2xl
-              lg:text-3xl
+              lg:text-2xl
               text-gray-900
               leading-snug
               px-6
@@ -520,7 +520,7 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="mt-5"
           >
-            <span className="text-red-500 text-2xl md:text-3xl font-bold">
+            <span className="text-red-500 text-xl md:text-2xl font-bold">
               Since 2002
             </span>
           </motion.div>

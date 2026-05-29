@@ -978,7 +978,7 @@ export default function Navbar() {
                               </p>
                             </div>
 
-                            <div
+                            {/* <div
                               className="
                                 min-w-[40px]
                                 w-10
@@ -991,16 +991,16 @@ export default function Navbar() {
                                 group-hover:bg-white/20
                                 transition-all
                               "
-                            >
-                              <ArrowRight
+                            > */}
+                              {/* <ArrowRight
                                 className="
                                   w-4
                                   h-4
                                   text-blue-900
                                   group-hover:text-white
                                 "
-                              />
-                            </div>
+                              /> */}
+                            {/* </div> */}
                           </motion.div>
                         ))}
                       </div>

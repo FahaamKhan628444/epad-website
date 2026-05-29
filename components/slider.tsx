@@ -199,7 +199,7 @@ export default function Slider() {
       <Swiper
   modules={[Autoplay, Pagination]}
   autoplay={{
-    delay: 6000, // stays longer on each slide
+    delay: 5000, // stays longer on each slide
     disableOnInteraction: false,
   }}
   pagination={{
